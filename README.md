@@ -43,11 +43,13 @@
 ## 文件结构
 
 ```
-├── image/                  # 图片资源
-│   ├── 名字.png           # 学校名称图片
-│   └── 校徽.png           # 学校校徽
-├── references.bib         # 参考文献数据库
-└── thesis_template.tex     # 主模板文件
+├── image/                    # 图片资源
+│   ├── 名字.png              # 学校名称图片
+│   └── 校徽.png              # 学校校徽
+├── references.bib           # 参考文献数据库
+└── thesis_template.tex      # 主模板文件
+└── SIMHEI.TTF               # 黑体字体文件
+└── SIMSUN.TTC               # 宋体字体文件
 ```
 
 **特别说明**：references.bib是存放参考文献的文件。如需使用参考文献，可前往知网等平台在论文引用中选择bib格式，并打开references.bib将粘贴内容复制进去。
