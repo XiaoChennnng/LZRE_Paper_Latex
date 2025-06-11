@@ -35,7 +35,7 @@
 └── thesis_template.tex     # 主模板文件
 ```
 
-**特别说明：**references.bib是存放参考文献的文件。如需使用参考文献，可前往知网等平台在论文引用中选择bib格式，并打开references.bib将粘贴内容复制进去。
+**特别说明**：references.bib是存放参考文献的文件。如需使用参考文献，可前往知网等平台在论文引用中选择bib格式，并打开references.bib将粘贴内容复制进去。
 
 在文中的引用命令为：
 
