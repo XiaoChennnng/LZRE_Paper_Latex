@@ -1,0 +1,239 @@
+\documentclass[12pt, a4paper]{article}
+
+% 引入必要的宏包
+\usepackage[UTF8]{ctex} % 支持中文处理，并指定UTF8编码
+\usepackage{graphicx} % 用于插入图片
+\usepackage{geometry} % 用于设置页面边距
+\usepackage{tabularx} % 用于创建更灵活的表格
+\usepackage{array}    % 用于更高级的表格列格式
+\usepackage{fontspec} % 用于字体设置
+\usepackage{amsmath}  % 数学公式
+\usepackage{fancyhdr} % 用于页眉页脚 
+\usepackage{titlesec} % 用于自定义标题样式
+\usepackage{setspace} % 用于设置行间距
+\usepackage{tocloft} % 用于自定义目录样式
+\usepackage{gbt7714} % 支持国标参考文献样式
+\usepackage{xcolor} % 支持颜色设置
+\usepackage{lastpage} % 用于获取总页数
+\renewcommand*{\refname}{} % 抑制gbt7714的参考文献标题
+
+
+% 页面边距设置
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+
+% 去掉页眉页脚和页码 (封面不需要)
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+    \includegraphics[height=2.94cm, width=14.64cm, keepaspectratio]{image/名字.png} %
+\end{center}
+
+\vspace{1.5cm}
+
+% 毕业设计标题
+\begin{center}
+    {\zihao{-1} \songti \textbf{本科毕业设计（论文}）}
+\end{center}
+
+\vspace{2cm}
+
+% 校徽
+\begin{center}
+    \includegraphics[height=4.64cm, width=8.25cm, keepaspectratio]{image/校徽.png} 
+\end{center}
+
+\vspace{1cm}
+
+% 信息表格
+% 修改命令定义，使用 \makebox 实现左列两端对齐
+\newcommand{\tableitem}[2]{{\zihao{3}\songti \makebox[3.5cm][s]{#1}} & {\zihao{3}\songti #2} \\ \cline{2-2}}
+\newcommand{\tableitemshort}[2]{{\zihao{3}\songti \makebox[3.5cm][s]{#1}} & {\zihao{3}\songti #2} \\ \cline{2-2}} % 题目行也应用此格式
+
+\begin{center} % 表格居中
+\noindent % 防止表格前有缩进
+\setlength{\tabcolsep}{2.69pt} % 设置单元格左右边距
+\renewcommand{\arraystretch}{1.5} % 增加行高倍数
+% 左列通过 \makebox 实现两端对齐，右列居中
+\begin{tabularx}{13.19cm}{l >{\centering\arraybackslash}X} % 左列改为l，对齐由makebox控制
+    \tableitemshort{题    目：}{XXXXXXXX的发展现状及应用研究} 
+    \tableitem{学    院：}{XX学院} 
+    \tableitem{专    业：}{}  
+    \tableitem{年 级、班：}{202X级 XXX班} 
+    \tableitem{学生姓名：}{XX} 
+    \tableitem{指导教师：}{XX} 
+\end{tabularx}
+\end{center} % 表格居中结束
+
+\vspace{1cm}
+
+\vspace{1cm}
+% 日期
+\begin{center}
+    {\zihao{3} \heiti 二〇二×年×月×日}
+\end{center}
+
+\newpage % 封面结束，开始新页面
+% 从摘要页开始设置页眉
+\pagestyle{fancy} % 设置页眉页脚样式
+\fancyhf{} % 清空当前的页眉页脚
+\renewcommand{\headrulewidth}{0pt} % 去掉页眉分割线
+\renewcommand{\footrulewidth}{0pt} % 去掉页脚分割线
+\chead{\color{gray}\songti\zihao{5}兰州资源环境职业技术大学毕业论文} % 设置页眉居中内容，宋体小五灰色
+%\cfoot{\thepage} % 页脚中间显示页码 (封面、摘要、目录前不显示页码)
+
+% 论文标题（中文页）
+\begin{center}
+    {\zihao{-2}\heiti XXXXXXXX 的发展现状及应用研究}
+\end{center}
+
+\vspace{1.5cm}
+
+% 摘要标题和内容
+\noindent % 取消段落缩进
+{\heiti\zihao{4}摘要}
+
+\vspace{0.5\baselineskip} % 段前0.5行
+\begin{spacing}{1.25} % 设置1.25倍行距
+\songti\zihao{-4} % 将字体和字号设置移到这里
+龙，是中华民族的图腾，也是中华文化的象征，它深深地烙印在每一个华夏儿女的心中。板凳龙是中国舞龙的形式之一，它的造型花样繁多，但整体形式基本相同，由龙头、龙身、龙尾和一条条长板凳连接而成，融合了体育、杂技、舞蹈等元素，具有很高的观赏价值和文化价值。舞龙者一般为20-50周岁男性，盘龙时，由龙头带领龙身和龙尾呈圆盘状进行表演，这就需要舞龙者具有良好的身体协调能力、灵活性与敏捷性、较好的体力与耐力以及舞者之间的默契配合，以便舞龙者在舞龙过程中准确地完成各种动作。
+\end{spacing}
+
+\vspace{0.5\baselineskip} % 段后0.5行
+
+% 关键词
+\noindent % 取消段落缩进
+{\heiti\zihao{4}关键词：}{\songti\zihao{-4} XX；XX；XX}
+
+\newpage    
+% 论文标题（英文页）
+\begin{center}
+    {\zihao{3}\fontspec{Times New Roman} \textbf{The Development Status and Application Research of XXXX}}
+\end{center}
+
+\vspace{1.5cm}
+
+% 摘要标题和内容
+\noindent % 取消段落缩进
+{\fontspec{Times New Roman}\zihao{4}\textbf{Abstract}}
+
+\vspace{0.5\baselineskip} % 段前0.5行
+\begin{spacing}{1.25} % 设置1.25倍行距
+\fontspec{Times New Roman}\zihao{4} % 将字体和字号设置移到这里
+Based on…
+\end{spacing}
+
+\vspace{0.5\baselineskip} % 段后0.5行
+
+% 关键词
+\noindent % 取消段落缩进
+{\fontspec{Times New Roman}\zihao{4}\textbf{Key words:}}{\fontspec{Times New Roman}\zihao{-4} XX；XX；XX}
+
+\newpage
+% 引言
+\section*{\centering \heiti\zihao{-2} \textbf{引\hspace{2em}言}}
+\vspace{0.5cm}
+\begin{spacing}{1.25} % 设置1.25倍行距
+\songti\zihao{4} 
+本文采用机器学习，构建了供应链延迟风险预测模型和延迟天数预测模型。通过对SCMS数据集10,324条历史交付记录的深入分析，识别出影响供应链绩效的关键风险因素，并依据风险评估结果制定了动态库存优化策略。
+\end{spacing}
+
+\newpage % 开始新的一页
+
+% 目录
+\begin{center}
+    {\heiti\zihao{-2} 目\hspace{2em}录}\vspace* {-2\baselineskip}
+\end{center}
+\vspace{0.01cm}
+
+% 设置目录格式
+\renewcommand{\contentsname}{} % 清除默认的目录标题
+\renewcommand{\cfttoctitlefont}{\hfill\heiti\zihao{3}} % 设置目录标题字体
+\renewcommand{\cftaftertoctitle}{\hfill} % 设置目录标题后的格式
+\renewcommand{\cftsecfont}{\songti\zihao{-4}} % 一级标题设置为宋体小四
+\renewcommand{\cftsubsecfont}{\songti\zihao{5}} % 二级标题设置为宋体五号
+\renewcommand{\cftsecpagefont}{\songti\zihao{-4}} % 一级标题页码字体
+\renewcommand{\cftsubsecpagefont}{\songti\zihao{-4}} % 二级标题页码字体
+\setlength{\cftbeforesecskip}{10pt} % 设置章节间距
+
+% 在目录前强制设置页眉，并设置目录页页脚为空
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\chead{\color{gray}\songti\zihao{5}兰州资源环境职业技术大学毕业论文}
+% \thispagestyle{empty} % 移动到tableofcontents之后
+
+\setcounter{secnumdepth}{0} % 取消章节编号
+\tableofcontents % 生成目录
+\thispagestyle{empty} % 在生成目录后，但在clearpage前，设置当前页（目录页）为空页脚
+\cleardoublepage % 清除当前页，确保新的一章从奇数页开始，并重置页码
+\pagenumbering{arabic} % 从这里开始使用阿拉伯数字页码，并从1开始计数
+
+% 在目录后再次强制设置页眉和页脚
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\chead{\color{gray}\songti\zihao{5}兰州资源环境职业技术大学毕业论文}
+\cfoot{\color{gray}\songti\zihao{5}第~$\thepage$~页\quad 共~$\pageref{LastPage}$~页} % 设置页脚格式，页码使用数学模式，并添加空格
+\thispagestyle{fancy} % 强制当前页为fancy
+
+% \newpage % 由cleardoublepage处理分页
+\section{\songti\zihao{3}{1\hspace{1em}绪论}}
+\renewcommand{\thesection}{}
+\begin{spacing}{1.25} % 设置1.25倍行距
+\songti\zihao{4}
+这里是绪论的引言部分，用于介绍研究的背景、目的和意义。\cite{HLKX202511017}
+
+\subsection{\songti\zihao{4}1.1 背景介绍}
+\renewcommand{\thesubsection}{}
+\songti\zihao{4}
+详细阐述研究的背景和重要性。
+
+\subsection{\songti\zihao{4}1.2 公式的样例}
+\renewcommand{\thesubsection}{}
+\songti\zihao{4}
+综述国内外相关领域的研究进展。
+
+\subsection{\songti\zihao{4}1.3 文章目的与研究意义}
+\renewcommand{\thesubsection}{}
+\songti\zihao{4}
+明确本研究的具体内容和采用的研究方法。
+
+\subsection{\songti\zihao{4}1.4 论文结构安排}
+\renewcommand{\thesubsection}{}
+\songti\zihao{4}
+简要介绍论文的章节安排。
+\end{spacing}
+
+
+
+\newpage
+% 参考文献
+\begin{spacing}{1.25} % 设置1.25倍行距
+{\centering \heiti\zihao{-2} 参考文献\par}\vspace* {-2\baselineskip}
+\songti\zihao{4}
+\bibliographystyle{gbt7714-numerical} % 设置参考文献样式为国标数字样式
+\bibliography{references} % 导入参考文献数据库文件 references.bib
+\end{spacing}
+
+\newpage
+% 致谢
+\begin{spacing}{1.25} % 设置1.25倍行距
+{\centering \heiti\zihao{-2} 致谢\par}\vspace* {\baselineskip} % 致谢标题，黑体，小二号，居中，段后增加一些垂直间距
+\songti\zihao{4} % 正文宋体四号
+\noindent % 不缩进
+在此处填写致谢内容。
+
+例如：
+
+感谢我的导师XXX教授的悉心指导。
+
+感谢所有帮助过我的人。
+\end{spacing}
+
+\end{document}
+
+
