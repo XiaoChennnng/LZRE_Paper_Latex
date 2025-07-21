@@ -1,7 +1,7 @@
 # **兰州资源环境职业技术大学 毕业论文LaTeX模板**
 
 <div style="display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto; gap: 15px;">
-  <img src="https://img.picui.cn/free/2025/06/11/68495bef8347c.png" alt="资环.png" title="资环.png" style="width: 100%;">
+  <img src="https://www.lzre.edu.cn/__local/7/BE/7D/40F912D9505DF087F29AFB01D72_3D330011_14D09.png" alt="资环.png" title="资环.png" style="width: 100%;">
 </div>
 
 ## **写在前面**
